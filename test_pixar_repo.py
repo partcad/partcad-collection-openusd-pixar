@@ -163,9 +163,13 @@ def test_the_kitchen_is_a_package_of_every_prop_it_places(pixar):
     assert "assets/Cup/Cup.geom.usd" in names and "README.txt" not in names
 
 
-def test_textures_only_when_asked_for(pixar):
-    plain = base64.b64decode(pixar(accept_license=True).get("usdskel-examples/files/HumanFemale.usdz"))
-    with zipfile.ZipFile(io.BytesIO(plain)) as z:
+def test_a_part_carries_its_look_unless_told_not_and_every_texture_when_asked(pixar):
+    looked = base64.b64decode(pixar(accept_license=True).get("usdskel-examples/files/HumanFemale.usdz"))
+    with zipfile.ZipFile(io.BytesIO(looked)) as z:
+        assert "textures/skin.png" in z.namelist()
+    bare = pixar(accept_license=True, looks=False)
+    assert bare.get("usdskel-examples/objects/part/HumanFemale")["path"] == "HumanFemale.bare.usdz"
+    with zipfile.ZipFile(io.BytesIO(base64.b64decode(bare.get("usdskel-examples/files/HumanFemale.bare.usdz")))) as z:
         assert "textures/skin.png" not in z.namelist()
     textured = pixar(accept_license=True, textures=True)
     assert textured.get("usdskel-examples/objects/part/HumanFemale")["path"] == "HumanFemale.textured.usdz"
