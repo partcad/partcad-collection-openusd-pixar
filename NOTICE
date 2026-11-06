@@ -1,0 +1,19 @@
+partcad-collection-openusd-pixar
+================================
+
+This PartCAD package serves Pixar's OpenUSD sample assets as PartCAD parts.
+
+The code in this repository (the `pixar_repo.py` repository plugin, the shared
+`usd_assets.py`, the PartCAD configuration and the tests) is:
+
+    Copyright 2026 PartCAD
+    Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+No asset is included in this repository. The assets, their layers and their
+textures are fetched on demand from https://openusd.org, and remain Pixar's,
+under Pixar's USD Asset End User License Agreement
+(https://openusd.org/release/dl_kitchen_set.html): Copyright Disney/Pixar.
+Nothing is fetched until the user has accepted that agreement.
+
+Pixar, the Kitchen Set and OpenUSD are trademarks of their owners. This package
+is not affiliated with or endorsed by Pixar.
