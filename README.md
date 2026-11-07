@@ -164,16 +164,17 @@ reads their directories (8 requests, 218 KB); every prop of the Kitchen Set, the
 City Set and HumanFemale - standing, and walking at her time codes - were packed by the plugin and
 read back by the part type with usd-core 26.11.
 
-Not drawn here, since that takes Pixar's licence; the Kitchen Set's props state their colours as
-`displayColor`, which the part type reads.
+With the licence accepted, drawn in their looks (`pc render -t png --style shaded`): the Kitchen Set's
+props - the bowl, the chair, the fridge with its notes, the kettle - and the whole kitchen (537
+thousand triangles) in the colours their `displayColor` gives, and HumanFemale in her textures,
+standing and walking at time code 115.
 
 Through PartCAD's own `usd` part type, run from the change that adds it to `//builtin` before its
 release, with all six `partcad-collection-openusd-*` packages in one workspace: `pc list packages -r`
 listed their 17 packages, and `pc search parts -P '<workspace>...'` answered across all of them in
 about two seconds, each collection searching its own catalog; `pc info` of the TeaKettle without the
-licence accepted was refused, saying how to accept it. A build with it accepted was not run through
-PartCAD, since accepting Pixar's agreement is not the tests' to do; the same path is run end to end
-with the other `partcad-collection-openusd-*` packages.
+licence accepted was refused, saying how to accept it; with it accepted, the parts above were built
+and drawn.
 
 ## Layout
 
