@@ -42,7 +42,9 @@ import sys
 # to what is answered - here, or in usd_assets.py.
 #
 # v1: Kitchen Set, City Set and UsdSkel examples, as PartCAD 'usd' parts.
-CACHE_VERSION = 1
+# v2: with the files a part's look is read from - its shaders, and its colour and finish
+#     images, a smaller copy where the source keeps one ('looks').
+CACHE_VERSION = 2
 
 
 def _shared():
