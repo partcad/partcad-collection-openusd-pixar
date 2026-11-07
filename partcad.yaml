@@ -17,7 +17,7 @@ url: https://openusd.org/release/dl_downloads.html
 
 # The first release whose //builtin has the 'usd' part type every part here
 # is.
-partcad: ">=0.9.6"
+partcad: ">=0.9.11"
 
 # Props and scenes made to be looked at: nothing in them says they are made to
 # be manufactured. The plugin says the same of 'assets' in its metadata.

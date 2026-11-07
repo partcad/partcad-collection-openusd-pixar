@@ -39,7 +39,7 @@ built, and kept by PartCAD from then on.
 **Nothing here is manufacturable.** These are props and scenes made to be looked at; the package says
 `manufacturable: false`, and so does the plugin of what it serves.
 
-Requires PartCAD 0.9.6 or newer: the first release whose `//builtin` has the `usd` part type.
+Requires PartCAD 0.9.11 or newer: the first release whose `//builtin` has the `usd` part type.
 
 ## Listing, searching, building
 
